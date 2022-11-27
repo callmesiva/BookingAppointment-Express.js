@@ -1,0 +1,81 @@
+body{
+    background-color: darkslategray;
+}
+
+fieldset {
+    background-color: white;
+    width: 500px;
+    border: 3px solid rgb(62, 107, 128);
+    margin: auto;
+}
+
+h4 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(62, 107, 128);
+}
+
+p {
+    text-align: center;
+    font-style: italic;
+    font-weight:bold;
+
+}
+
+input {
+    width: 500px;
+}
+
+#date {
+    width: 247px;
+    height: 19px;
+}
+
+select {
+    width: 247px;
+    height: 23px;
+}
+
+#button {
+    color: white;
+    background-color: rgb(62, 107, 128);
+    border: none;
+    height: 30px;
+}
+
+.msg {
+    color: aliceblue;
+    width: 700px;
+    height: 18px;
+    border-radius: 5px;
+    text-align:start;
+}
+
+
+
+ h5{
+    color: black;
+    animation: hideAnimation 0s ease-in 3s;
+    animation-fill-mode: forwards;
+ }
+
+ @keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .edit,.delete{
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgb(99, 61, 136);
+    display: inline-block;
+    width: 65px;
+    border-radius: 4px;
+}
+.delete{
+    background-color: rgb(154, 43, 43);
+}

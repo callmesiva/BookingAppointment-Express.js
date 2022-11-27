@@ -1,0 +1,36 @@
+<fieldset>
+        <br>
+        <h4> Book a Call</h4>
+        <p>Book a call slot our representative will reach you with in one hour</p>
+        <hr>
+        
+        {{#if msg}}
+         <h5>{{msg}}</h5>
+        {{/if}}
+    
+
+        <form method="post" action="/" id="my-form">
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="10"><br>
+            <label for="date">Time for Call:</label><br>
+            <input type="date" id="date" name="date">
+            <select id="time" name="time">
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+            </select><br><br>
+            <input type="submit" id="button" value="Get On call">
+        </form>
+
+    </fieldset>
+
+{{#each resolve}}
+ <ol class="msg" id="listOfUsers"> {{this.name}}-{{this.email}}-{{this.phone}}-{{this.date}}-{{this.time}} <a href="/{{this.id}}"  class="edit">Edit</a> <a href="/{{this.id}}" class="delete">Delete</a></ol>
+ {{/each}}

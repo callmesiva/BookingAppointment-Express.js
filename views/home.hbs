@@ -32,5 +32,5 @@
     </fieldset>
 
 {{#each resolve}}
- <ol class="msg" id="listOfUsers"> {{this.name}}-{{this.email}}-{{this.phone}}-{{this.date}}-{{this.time}} <a href="/{{this.id}}"  class="edit">Edit</a> <a href="/{{this.id}}" class="delete">Delete</a></ol>
+ <ol class="msg" id="listOfUsers"> {{this.name}}-{{this.email}}-{{this.phone}}-{{this.date}}-{{this.time}} <a href="/{{this.id}}"  class="edit">Edit</a> <a onclick="return confirm('Are You Sure')" href="/delete/{{this.id}}" class="delete">Delete</a></ol>
  {{/each}}

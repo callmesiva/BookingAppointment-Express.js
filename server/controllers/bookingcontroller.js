@@ -43,7 +43,7 @@ exports.editpage=(req,res)=>{
            if(!err){
                  db.query("select * from bookapp",(err,resolve)=>{
                      if(!err){
-                        res.render("home",{row,resolve});
+                        res.render("editpage",{row,resolve});
                    }
                })
             }
